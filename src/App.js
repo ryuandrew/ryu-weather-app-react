@@ -52,8 +52,8 @@ function App() {
             className={
                 typeof weather.main != "undefined"
                     ? weather.main.temp > 60
-                        ? "app warm"
-                        : "app"
+                        ? "app clouds"
+                        : "app cool"
                     : "app"
             }
         >
@@ -69,7 +69,7 @@ function App() {
                     />
                 </div>
                 {typeof weather.main != "undefined" ? (
-                    <div>
+                    <div className="body">
                         <div className="locationBox">
                             <div className="location">
                                 {weather.name}, {weather.sys.country}{" "}
@@ -84,6 +84,12 @@ function App() {
                             </div>
                             <div className="weather">
                                 {weather.weather[0].main}
+                                <div className="max-min">
+                                    Max: {Math.round(weather.main.temp_max)}°F
+                                </div>
+                                <div className="max-min">
+                                    Min: {Math.round(weather.main.temp_min)}°F
+                                </div>
                             </div>
                         </div>
                     </div>
