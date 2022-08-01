@@ -69,10 +69,6 @@ main {
     background-color: var(--color-txt-bg);
 }
 
-.body {
-    margin-top: 150px;
-}
-
 .locationBox > .location {
     color: var(--color-white);
     font-size: 40px;
